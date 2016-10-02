@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Jeff Miller -- Developer -- @couchchamp
 
 # THANKS
 
-    <name>
+    Bill Simmons
 
 # TECHNOLOGY COLOPHON
 
