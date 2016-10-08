@@ -104,11 +104,20 @@
 
       <hr>
 
+      <div class="row">
+        <div class="col-md-12">
+          <div id="table_div"></div>
+        </div>
+      </div>
+
+      <hr>
+
       <footer>
         <a href='https://about.me/jeffmiller00'>Jeff Miller</a> <a href="https://twitter.com/couchchamp" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @couchchamp</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </div> <!-- /container -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -127,8 +136,12 @@
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script>
-          google.charts.load('current', {packages: ['corechart', 'line']});
-          google.charts.setOnLoadCallback(drawLineStyles);
+          function drawAllCharts() {
+            drawLineStyles();
+            drawTable();
+          }
+          google.charts.load('current', {packages: ['corechart', 'line', 'table']});
+          google.charts.setOnLoadCallback(drawAllCharts);
 
           function drawLineStyles() {
             var data = new google.visualization.DataTable();
@@ -142,7 +155,8 @@
               ['1', 4, 2, 5, 5],
               ['2', 9, 6, 8, 9],
               ['3', 10, 12, 12, 14],
-              ['4', 12, 16, 17, 18]
+              ['4', 12, 16, 17, 18],
+              ['5', 13, 16, 17, 18]
             ]);
             var options = {
               hAxis: {
@@ -153,15 +167,64 @@
               },
               colors: ['#DD4814', '#C5CED6', '#3B0160', '#FFB612'],
               series: {
-                0: { lineWidth: 5 },
-                1: { lineWidth: 5 },
-                2: { lineWidth: 5 },
-                3: { lineWidth: 5 }
+                0: { lineWidth: 4 },
+                1: { lineWidth: 4 },
+                2: { lineWidth: 4 },
+                3: { lineWidth: 4 }
               }
             };
 
             var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
             chart.draw(data, options);
+          }
+
+          function drawTable() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Team');
+            data.addColumn('string', 'Brother');
+            data.addColumn('number', 'Wins Wk01');
+            data.addColumn('number', 'Wins Wk02');
+            data.addColumn('number', 'Wins Wk03');
+            data.addColumn('number', 'Wins Wk04');
+            data.addColumn('number', 'Wins Wk05');
+            data.addRows([
+['49ers', 'Greg' ,1,1,1,1,1],
+['Bears', 'Jeff' ,0,0,0,1,0],
+['Bengals', 'Tim' ,1,1,1,2,0],
+['Bills', 'Greg' ,0,0,1,2,0],
+['Broncos', 'Zach' ,1,2,3,4,0],
+['Browns', 'Jeff' ,0,0,0,0,0],
+['Buccaneers', 'Zach' ,1,1,1,1,0],
+['Cardinals', 'Jeff' ,0,1,1,1,2],
+['Chargers', 'Jeff' ,0,1,1,1,0],
+['Chiefs', 'Zach' ,1,1,2,2,0],
+['Colts', 'Greg' ,0,0,1,1,0],
+['Cowboys', 'Greg' ,0,1,2,3,0],
+['Dolphins', 'Tim' ,0,0,1,1,0],
+['Eagles', 'Zach' ,1,2,3,3,0],
+['Falcons', 'Greg' ,0,1,2,3,0],
+['Giants', 'Jeff' ,1,2,2,2,0],
+['Jaguars', 'Tim' ,0,0,0,1,0],
+['Jets', 'Tim' ,0,1,1,1,0],
+['Lions', 'Jeff' ,1,1,1,1,0],
+['Packers', 'Tim' ,1,1,2,2,0],
+['Panthers', 'Greg' ,0,1,1,1,0],
+['Patriots', 'Greg' ,1,2,3,3,0],
+['Raiders', 'Tim' ,1,1,2,3,0],
+['Rams', 'Zach' ,0,1,2,3,0],
+['Ravens', 'Jeff' ,1,2,3,3,0],
+['Redskins', 'Greg' ,0,0,1,2,0],
+['Saints', 'Zach' ,0,0,0,1,0],
+['Seahawks', 'Zach' ,1,1,2,3,0],
+['Steelers', 'Tim' ,1,2,2,3,0],
+['Texans', 'Jeff' ,1,2,2,3,0],
+['Titans', 'Zach' ,0,1,1,1,0],
+['Vikings', 'Tim' ,1,2,3,4,0],
+            ]);
+
+            var table = new google.visualization.Table(document.getElementById('table_div'));
+
+            table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
           }
         </script>
     </body>
