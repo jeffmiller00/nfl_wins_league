@@ -160,7 +160,8 @@
               ['5', 14, 22, 21, 20],
               ['6', 19, 26, 23, 24],
               ['7', 22, 28, 28, 28],
-              ['8', 25, 32, 30, 32]
+              ['8', 25, 32, 30, 32],
+              ['9', 28, 36, 32, 35]
             ]);
             var options = {
               hAxis: {
@@ -194,39 +195,40 @@
             data.addColumn('number', 'Wk06');
             data.addColumn('number', 'Wk07');
             data.addColumn('number', 'Wk08');
+            data.addColumn('number', 'Wk09');
             data.addRows([
-              ['Greg', '49ers' ,1,1,1,1,1,1,1,1],
-              ['Jeff', 'Bears' ,0,0,0,1,1,1,1,2],
-              ['Tim', 'Bengals' ,1,1,1,2,2,2,3,3],
-              ['Greg', 'Bills' ,0,0,1,2,3,4,4,4],
-              ['Zach', 'Broncos' ,1,2,3,4,4,4,5,6],
-              ['Jeff', 'Browns' ,0,0,0,0,0,0,0,0],
-              ['Zach', 'Buccaneers' ,1,1,1,1,2,2,3,3],
-              ['Jeff', 'Cardinals' ,0,1,1,1,2,3,3,3],
-              ['Jeff', 'Chargers' ,0,1,1,1,1,2,3,4],
-              ['Zach', 'Chiefs' ,1,1,2,2,2,3,4,5],
-              ['Greg', 'Colts' ,0,0,1,1,2,2,3,3],
-              ['Greg', 'Cowboys' ,0,1,2,3,4,5,5,6],
-              ['Tim', 'Dolphins' ,0,0,1,1,1,2,3,3],
-              ['Zach', 'Eagles' ,1,2,3,3,3,3,4,4],
-              ['Greg', 'Falcons' ,0,1,2,3,4,4,4,5],
-              ['Jeff', 'Giants' ,1,2,2,2,2,3,4,4],
-              ['Tim', 'Jaguars' ,0,0,0,1,1,2,2,2],
-              ['Tim', 'Jets' ,0,1,1,1,1,1,2,3],
-              ['Jeff', 'Lions' ,1,1,1,1,2,3,4,4],
-              ['Tim', 'Packers' ,1,1,2,2,3,3,4,4],
-              ['Greg', 'Panthers' ,0,1,1,1,1,1,1,2],
-              ['Greg', 'Patriots' ,1,2,3,3,4,5,6,7],
-              ['Tim', 'Raiders' ,1,1,2,3,4,4,5,6],
-              ['Zach', 'Rams' ,0,1,2,3,3,3,3,3],
-              ['Jeff', 'Ravens' ,1,2,3,3,3,3,3,3],
-              ['Greg', 'Redskins' ,0,0,1,2,3,4,4,4],
-              ['Zach', 'Saints' ,0,0,0,1,1,2,2,3],
-              ['Zach', 'Seahawks' ,1,1,2,3,3,4,4,4],
-              ['Tim', 'Steelers' ,1,2,2,3,4,4,4,4],
-              ['Jeff', 'Texans' ,1,2,2,3,3,4,4,5],
-              ['Zach', 'Titans' ,0,1,1,1,2,3,3,4],
-              ['Tim', 'Vikings' ,1,2,3,4,5,5,5,5]
+              ['Greg', '49ers' ,1,1,1,1,1,1,1,1,1],
+              ['Jeff', 'Bears' ,0,0,0,1,1,1,1,2,2],
+              ['Tim', 'Bengals' ,1,1,1,2,2,2,3,3,3],
+              ['Greg', 'Bills' ,0,0,1,2,3,4,4,4,4],
+              ['Zach', 'Broncos' ,1,2,3,4,4,4,5,6,6],
+              ['Jeff', 'Browns' ,0,0,0,0,0,0,0,0,0],
+              ['Zach', 'Buccaneers' ,1,1,1,1,2,2,3,3,3],
+              ['Jeff', 'Cardinals' ,0,1,1,1,2,3,3,3,3],
+              ['Jeff', 'Chargers' ,0,1,1,1,1,2,3,3,4],
+              ['Zach', 'Chiefs' ,1,1,2,2,2,3,4,5,6],
+              ['Greg', 'Colts' ,0,0,1,1,2,2,3,3,4],
+              ['Greg', 'Cowboys' ,0,1,2,3,4,5,5,6,7],
+              ['Tim', 'Dolphins' ,0,0,1,1,1,2,3,3,4],
+              ['Zach', 'Eagles' ,1,2,3,3,3,3,4,4,4],
+              ['Greg', 'Falcons' ,0,1,2,3,4,4,4,5,6],
+              ['Jeff', 'Giants' ,1,2,2,2,2,3,4,4,5],
+              ['Tim', 'Jaguars' ,0,0,0,1,1,2,2,2,2],
+              ['Tim', 'Jets' ,0,1,1,1,1,1,2,3,3],
+              ['Jeff', 'Lions' ,1,1,1,1,2,3,4,4,5],
+              ['Tim', 'Packers' ,1,1,2,2,3,3,4,4,4],
+              ['Greg', 'Panthers' ,0,1,1,1,1,1,1,2,3],
+              ['Greg', 'Patriots' ,1,2,3,3,4,5,6,7,7],
+              ['Tim', 'Raiders' ,1,1,2,3,4,4,5,6,7],
+              ['Zach', 'Rams' ,0,1,2,3,3,3,3,3,3],
+              ['Jeff', 'Ravens' ,1,2,3,3,3,3,3,3,4],
+              ['Greg', 'Redskins' ,0,0,1,2,3,4,4,4,4],
+              ['Zach', 'Saints' ,0,0,0,1,1,2,2,3,4],
+              ['Zach', 'Seahawks' ,1,1,2,3,3,4,4,4,5],
+              ['Tim', 'Steelers' ,1,2,2,3,4,4,4,4,4],
+              ['Jeff', 'Texans' ,1,2,2,3,3,4,4,5,5],
+              ['Zach', 'Titans' ,0,1,1,1,2,3,3,4,4],
+              ['Tim', 'Vikings' ,1,2,3,4,5,5,5,5,5]
             ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));
