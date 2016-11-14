@@ -142,19 +142,20 @@
 
           function drawLineStyles() {
             var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Week');
+            data.addColumn('string', 'Date');
             data.addColumn('number', 'Jeff');
             data.addColumn('number', 'Greg');
             data.addColumn('number', 'Tim');
             data.addColumn('number', 'Zach');
 
             data.addRows([
-              ['0', 0, 0, 0, 0],
-              ['1', 25, 50, 75, 100]
+              ['10.28.16', 9, 5, 6, 5],
+              ['11.04.16', 22, 22, 16, 16],
+              ['11.11.16', 33, 36, 27, 28]
             ]);
             var options = {
               hAxis: {
-                title: 'Week'
+                title: 'Date'
               },
               vAxis: {
                 title: 'Wins'
@@ -176,9 +177,40 @@
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Brother');
             data.addColumn('string', 'Team');
-            data.addColumn('number', 'Wk01');
+            data.addColumn('number', '10.28.16');
+            data.addColumn('number', '11.04.16');
+            data.addColumn('number', '11.11.16');
             data.addRows([
-              ['Greg', '49ers' ,1]
+              ['Zach', 'Atlanta' ,1,3,6],
+              ['Jeff', 'Boston' ,1,3,4],
+              ['Zach', 'Brooklyn' ,1,2,3],
+              ['Jeff', 'Charlotte' ,2,4,6],
+              ['Greg', 'Chicago' ,1,3,5],
+              ['Tim', 'Cleveland' ,2,5,7],
+              ['Tim', 'Dallas' ,0,0,2],
+              ['Tim', 'Denver' ,1,2,3],
+              ['Greg', 'Detroit' ,1,3,4],
+              ['Zach', 'Golden State' ,1,4,7],
+              ['Jeff', 'Houston' ,1,3,5],
+              ['Tim', 'Indiana' ,1,2,4],
+              ['Tim', 'L.A. Lakers' ,1,3,5],
+              ['Greg', 'LA Clippers' ,1,4,8],
+              ['Tim', 'Memphis' ,1,3,4],
+              ['Zach', 'Miami' ,1,2,2],
+              ['Greg', 'Milwaukee' ,0,3,4],
+              ['Jeff', 'Minnesota' ,0,1,2],
+              ['Zach', 'New Orleans' ,0,0,1],
+              ['Zach', 'New York' ,0,2,3],
+              ['Jeff', 'Oklahoma City' ,2,4,6],
+              ['Greg', 'Orlando' ,0,2,3],
+              ['', 'Philadelphia' ,0,0,1],
+              ['', 'Phoenix' ,0,2,3],
+              ['Greg', 'Portland' ,1,3,6],
+              ['Jeff', 'Sacramento' ,1,2,4],
+              ['Jeff', 'San Antonio' ,2,5,6],
+              ['Greg', 'Toronto' ,1,4,6],
+              ['Zach', 'Utah' ,1,3,6],
+              ['Tim', 'Washington' ,0,1,2]
             ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));
