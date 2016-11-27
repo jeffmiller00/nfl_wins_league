@@ -152,7 +152,8 @@
               ['10.28.16', 9, 5, 6, 5],
               ['11.04.16', 22, 22, 16, 16],
               ['11.11.16', 33, 36, 27, 28],
-              ['11.18.16', 46, 50, 39, 39]
+              ['11.18.16', 46, 50, 39, 39],
+              ['11.25.16', 60, 63, 51, 56]
             ]);
             var options = {
               hAxis: {
@@ -182,37 +183,38 @@
             data.addColumn('number', '11.04.16');
             data.addColumn('number', '11.11.16');
             data.addColumn('number', '11.18.16');
+            data.addColumn('number', '11.25.16');
             data.addRows([
-              ['Zach', 'Atlanta' ,1,3,6,9],
-              ['Jeff', 'Boston' ,1,3,4,6],
-              ['Zach', 'Brooklyn' ,1,2,3,4],
-              ['Jeff', 'Charlotte' ,2,4,6,8],
-              ['Greg', 'Chicago' ,1,3,5,8],
-              ['Tim', 'Cleveland' ,2,5,7,10],
-              ['Tim', 'Dallas' ,0,0,2,2],
-              ['Tim', 'Denver' ,1,2,3,4],
-              ['Greg', 'Detroit' ,1,3,4,6],
-              ['Zach', 'Golden State' ,1,4,7,9],
-              ['Jeff', 'Houston' ,1,3,5,7],
-              ['Tim', 'Indiana' ,1,2,4,6],
-              ['Tim', 'L.A. Lakers' ,1,3,5,7],
-              ['Greg', 'LA Clippers' ,1,4,8,11],
-              ['Tim', 'Memphis' ,1,3,4,7],
-              ['Zach', 'Miami' ,1,2,2,3],
-              ['Greg', 'Milwaukee' ,0,3,4,5],
-              ['Jeff', 'Minnesota' ,0,1,2,4],
-              ['Zach', 'New Orleans' ,0,0,1,2],
-              ['Zach', 'New York' ,0,2,3,5],
-              ['Jeff', 'Oklahoma City' ,2,4,6,7],
-              ['Greg', 'Orlando' ,0,2,3,5],
-              ['', 'Philadelphia' ,0,0,1,2],
-              ['', 'Phoenix' ,0,2,3,3],
-              ['Greg', 'Portland' ,1,3,6,7],
-              ['Jeff', 'Sacramento' ,1,2,4,4],
-              ['Jeff', 'San Antonio' ,2,5,6,10],
-              ['Greg', 'Toronto' ,1,4,6,8],
-              ['Zach', 'Utah' ,1,3,6,7],
-              ['Tim', 'Washington' ,0,1,2,3]
+              ['Zach', 'Atlanta' ,1,3,6,9,10],
+              ['Jeff', 'Boston' ,1,3,4,6,9],
+              ['Zach', 'Brooklyn' ,1,2,3,4,4],
+              ['Jeff', 'Charlotte' ,2,4,6,8,8],
+              ['Greg', 'Chicago' ,1,3,5,8,10],
+              ['Tim', 'Cleveland' ,2,5,7,10,12],
+              ['Tim', 'Dallas' ,0,0,2,2,2],
+              ['Tim', 'Denver' ,1,2,3,4,6],
+              ['Greg', 'Detroit' ,1,3,4,6,8],
+              ['Zach', 'Golden State' ,1,4,7,9,14],
+              ['Jeff', 'Houston' ,1,3,5,7,10],
+              ['Tim', 'Indiana' ,1,2,4,6,8],
+              ['Tim', 'L.A. Lakers' ,1,3,5,7,8],
+              ['Greg', 'LA Clippers' ,1,4,8,11,14],
+              ['Tim', 'Memphis' ,1,3,4,7,10],
+              ['Zach', 'Miami' ,1,2,2,3,5],
+              ['Greg', 'Milwaukee' ,0,3,4,5,6],
+              ['Jeff', 'Minnesota' ,0,1,2,4,5],
+              ['Zach', 'New Orleans' ,0,0,1,2,6],
+              ['Zach', 'New York' ,0,2,3,5,8],
+              ['Jeff', 'Oklahoma City' ,2,4,6,7,9],
+              ['Greg', 'Orlando' ,0,2,3,5,6],
+              ['', 'Philadelphia' ,0,0,1,2,4],
+              ['', 'Phoenix' ,0,2,3,3,5],
+              ['Greg', 'Portland' ,1,3,6,7,9],
+              ['Jeff', 'Sacramento' ,1,2,4,4,6],
+              ['Jeff', 'San Antonio' ,2,5,6,10,13],
+              ['Greg', 'Toronto' ,1,4,6,8,10],
+              ['Zach', 'Utah' ,1,3,6,7,9],
+              ['Tim', 'Washington' ,0,1,2,3,5]
             ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));
