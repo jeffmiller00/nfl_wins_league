@@ -1,0 +1,196 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Brothers NFL league wins</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+            .blackandwhite {
+              -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+              filter: grayscale(100%);
+            }
+            .strikethrough {
+              text-decoration: line-through;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="https://unpkg.com/vue"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Miller Brothers NFL Wins League</a>
+        </div>
+        <a class="btn btn-default navbar-right" href="index.html">NBA</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Undrafted</h1>
+          <ol id="undrafted-list">
+            <li v-for="item in items">
+              <img :src=item.image v-bind:class="{ 'blackandwhite': item.drafted_by.length != 0 }"><h4 v-bind:class="{ 'strike': item.drafted_by.length != 0 }">{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-xs-3">
+          <h1>Jeff</h1>
+          <h3><em>Pick: ?</em></h3>
+          <ol id="jeff-list">
+            <li v-for="item in items">
+              <img :src=item.image><h4>{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Greg</h1>
+          <h3><em>Pick: ?</em></h3>
+          <ol id="greg-list">
+            <li v-for="item in items">
+              <img :src=item.image><h4>{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Tim</h1>
+          <h3><em>Pick: ?</em></h3>
+          <ol id="tim-list">
+            <li v-for="item in items">
+              <img :src=item.image><h4>{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Zach</h1>
+          <h3><em>Pick: ?</em></h3>
+          <ol id="zach-list">
+            <li v-for="item in items">
+              <img :src=item.image><h4>{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="col-xs-3">
+          <h1>Mike</h1>
+          <h3><em>Pick: ?</em></h3>
+          <ol id="mike-list">
+            <li v-for="item in items">
+              <img :src=item.image><h4>{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->
+
+    <script type='text/javascript'>
+    var undrafted = []
+    var jeff = []
+    var greg = []
+    var tim = []
+    var zach = []
+    var mike = []
+
+    function updateTeams() {
+      undrafted = []
+      jeff = []
+      greg = []
+      tim = []
+      zach = []
+      mike = []
+
+      $.getJSON("draft.json", function(json) {
+        $.each(json["teams"], function(i, val) {
+          val["full_name"] = val.location + " " + val.name
+          console.log( i + ": " + val["full_name"] );
+          if(val.drafted_by.length == 0) {
+            undrafted.push(val);
+          }
+          if(val.drafted_by.toLowerCase() == "jeff") {
+            jeff.push(val);
+          }
+          if(val.drafted_by.toLowerCase() == "greg") {
+            greg.push(val);
+          }
+          if(val.drafted_by.toLowerCase() == "tim") {
+            tim.push(val);
+          }
+          if(val.drafted_by.toLowerCase() == "zach") {
+            zach.push(val);
+          }
+          if(val.drafted_by.toLowerCase() == "mike") {
+            mike.push(val);
+          }
+          //debugger;
+        });
+      });
+      // setTimeout("updateTeams()", 1000);
+    }
+
+    $( document ).ready( updateTeams() );
+
+    var undraftedList = new Vue({
+      el: '#undrafted-list',
+      data: {
+        items: undrafted
+      }
+    });
+    var jeffList = new Vue({
+      el: '#jeff-list',
+      data: {
+        items: jeff
+      }
+    });
+    var gregList = new Vue({
+      el: '#greg-list',
+      data: {
+        items: greg
+      }
+    });
+    var timList = new Vue({
+      el: '#tim-list',
+      data: {
+        items: tim
+      }
+    });
+    var zachList = new Vue({
+      el: '#zach-list',
+      data: {
+        items: zach
+      }
+    });
+    var mikeList = new Vue({
+      el: '#mike-list',
+      data: {
+        items: mike
+      }
+    });
+    </script>
+  </body>
+</html>
