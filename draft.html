@@ -16,12 +16,16 @@
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
-            .blackandwhite {
-              -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-              filter: grayscale(100%);
+            ol {
+              margin: 0 auto;
+              text-align: center;
             }
-            .strikethrough {
-              text-decoration: line-through;
+            #undrafted-list li {
+              display: inline-block;
+              vertical-align: top;
+            }
+            #undrafted-list li h4 {
+              margin: 0.5em 0.5em;
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -39,7 +43,6 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Miller Brothers NFL Wins League</a>
         </div>
-        <a class="btn btn-default navbar-right" href="index.html">NBA</a>
       </div>
     </nav>
 
@@ -58,9 +61,36 @@
       <hr />
 
       <div class="row">
-        <div class="col-xs-3">
+        <div class="col-xs-2">
+          <h1>Tim</h1>
+          <h3><em>Pick: 1</em></h3>
+          <ol id="tim-list">
+            <li v-for="item in items">
+              <img :src=item.image><h4>{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Mike</h1>
+          <h3><em>Pick: 2</em></h3>
+          <ol id="mike-list">
+            <li v-for="item in items">
+              <img :src=item.image><h4>{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Zach</h1>
+          <h3><em>Pick: 3</em></h3>
+          <ol id="zach-list">
+            <li v-for="item in items">
+              <img :src=item.image><h4>{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
           <h1>Jeff</h1>
-          <h3><em>Pick: ?</em></h3>
+          <h3><em>Pick: 4</em></h3>
           <ol id="jeff-list">
             <li v-for="item in items">
               <img :src=item.image><h4>{{ item.full_name }}</h4>
@@ -69,35 +99,8 @@
         </div>
         <div class="col-xs-2">
           <h1>Greg</h1>
-          <h3><em>Pick: ?</em></h3>
+          <h3><em>Pick: 5</em></h3>
           <ol id="greg-list">
-            <li v-for="item in items">
-              <img :src=item.image><h4>{{ item.full_name }}</h4>
-            </li>
-          </ol>
-        </div>
-        <div class="col-xs-2">
-          <h1>Tim</h1>
-          <h3><em>Pick: ?</em></h3>
-          <ol id="tim-list">
-            <li v-for="item in items">
-              <img :src=item.image><h4>{{ item.full_name }}</h4>
-            </li>
-          </ol>
-        </div>
-        <div class="col-xs-2">
-          <h1>Zach</h1>
-          <h3><em>Pick: ?</em></h3>
-          <ol id="zach-list">
-            <li v-for="item in items">
-              <img :src=item.image><h4>{{ item.full_name }}</h4>
-            </li>
-          </ol>
-        </div>
-        <div class="col-xs-3">
-          <h1>Mike</h1>
-          <h3><em>Pick: ?</em></h3>
-          <ol id="mike-list">
             <li v-for="item in items">
               <img :src=item.image><h4>{{ item.full_name }}</h4>
             </li>
@@ -117,7 +120,17 @@
     var zach = []
     var mike = []
 
-    function updateTeams() {
+    function refreshLists() {
+      undraftedList.items = undrafted;
+      jeffList.items = jeff;
+      gregList.items = greg;
+      timList.items  = tim;
+      zachList.items = zach;
+      mikeList.items = mike;
+      //console.log("Tried to update! -------------------------");
+    }
+
+    function getUpdatedList() {
       undrafted = []
       jeff = []
       greg = []
@@ -125,10 +138,10 @@
       zach = []
       mike = []
 
-      $.getJSON("draft.json", function(json) {
+      $.getJSON("http://www.kristaandjeff.com/brothers/nfl_2017.json", function(json) {
         $.each(json["teams"], function(i, val) {
           val["full_name"] = val.location + " " + val.name
-          console.log( i + ": " + val["full_name"] );
+          // console.log( i + ": " + val["full_name"] );
           if(val.drafted_by.length == 0) {
             undrafted.push(val);
           }
@@ -149,12 +162,13 @@
           }
           //debugger;
         });
+        refreshLists();
       });
-      // setTimeout("updateTeams()", 1000);
+
+      setTimeout("getUpdatedList()", 1000);
     }
 
-    $( document ).ready( updateTeams() );
-
+    $( document ).ready( getUpdatedList() );
     var undraftedList = new Vue({
       el: '#undrafted-list',
       data: {
