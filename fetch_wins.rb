@@ -1,7 +1,7 @@
 require 'httpi'
 require 'nokogiri'
 require 'json'
-require 'pry'
+require 'pry-coolline'
 
 def get_teams
   all_teams = File.read('./nfl_2017.json')
@@ -23,8 +23,15 @@ EMPTY_WEEK = {jeff: 0, greg: 0, tim: 0, zach: 0, mike: 0}
 def generate_summary_chart
   all_teams = get_teams
   weeklySummary = []
-  weeklySummary[0] = EMPTY_WEEK
-  weeklySummary[0][:dates] = (Date.parse('2017-09-07')..Date.parse('2017-09-11'))
+  week1begin = Date.parse('2017-09-07')
+  week1end   = Date.parse('2017-09-11')
+  3.times do |i|
+    weeklySummary[i] = EMPTY_WEEK.dup
+    weekBegin = week1begin.next_day(7*i)
+    weekEnd   = week1end.next_day(7*i)
+    weeklySummary[i][:weekNum] = i+1
+    weeklySummary[i][:dates] = (weekBegin..weekEnd)
+  end
 
   all_teams.each do |team|
     next if team['drafted_by'].empty?
@@ -56,14 +63,11 @@ full_doc = Nokogiri::HTML(response.body)
 
 truth_teams = full_doc.xpath('//*[@id="main-content"]/div[1]/div[2]/div[1]/table/tr')
 
-
-
 all_teams = File.read('./nfl_2017.json')
 all_teams = JSON.parse(all_teams)
 
 all_teams.each do |team|
   wins = truth_teams.search("[text()*='#{team['name']}']").first.parent.parent.children[7].text.to_i
-  team['wins'] = {}
   team['wins'][Date.today.prev_day.to_s] = wins
 end
 
@@ -71,7 +75,6 @@ FileUtils.copy('./nfl_2017.json', "./archive/nfl_2017_#{Date.today}.json")
 File.open('./nfl_2017.json',"w") do |f|
   f.write(all_teams.to_json)
 end
-
 
 
 generate_team_table
