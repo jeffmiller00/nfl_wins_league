@@ -19,7 +19,7 @@ def generate_team_table
 end
 
 EMPTY_WEEK = {jeff: 0, greg: 0, tim: 0, zach: 0, mike: 0}
-CURRENT_NFL_WEEK = 4
+CURRENT_NFL_WEEK = 6
 
 def generate_summary_chart
   all_teams = get_teams
@@ -51,7 +51,7 @@ def generate_summary_chart
   end
 end
 
-def write_file?; false; end;
+def write_file?; true; end;
 
 if write_file?
   request = HTTPI::Request.new
