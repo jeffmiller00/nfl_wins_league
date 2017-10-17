@@ -1,0 +1,241 @@
+[{
+  "location": "Atlanta",
+  "name": "Hawks",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/ATL.svg",
+  "drafted_by": "zach",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Boston",
+  "name": "Celtics",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BOS.svg",
+  "drafted_by": "zach",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Brooklyn",
+  "name": "Nets",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BKN.svg",
+  "drafted_by": "",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Charlotte",
+  "name": "Hornets",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/CHA.svg",
+  "drafted_by": "tim",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Chicago",
+  "name": "Bulls",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/CHI.svg",
+  "drafted_by": "",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Cleveland ",
+  "name": "Cavaliers",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/CLE.svg",
+  "drafted_by": "zach",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Dallas",
+  "name": "Mavericks",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/DAL.svg",
+  "drafted_by": "greg",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Denver",
+  "name": "Nuggets",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/DEN.svg",
+  "drafted_by": "tim",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Detroit",
+  "name": "Pistons",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/DET.svg",
+  "drafted_by": "jeff",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Golden State",
+  "name": "Warriors",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/GSW.svg",
+  "drafted_by": "greg",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Houston",
+  "name": "Rockets",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/HOU.svg",
+  "drafted_by": "jeff",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Indiana",
+  "name": "Pacers",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/IND.svg",
+  "drafted_by": "zach",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "LA",
+  "name": "Clippers",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/LAC.svg",
+  "drafted_by": "jeff",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Los Angeles",
+  "name": "Lakers",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/LAL.svg",
+  "drafted_by": "zach",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Memphis",
+  "name": "Grizzlies",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/MEM.svg",
+  "drafted_by": "jeff",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Miami",
+  "name": "Heat",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/MIA.svg",
+  "drafted_by": "zach",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Milwaukee",
+  "name": "Bucks",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/MIL.svg",
+  "drafted_by": "jeff",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Minnesota",
+  "name": "Timberwolves",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/MIN.svg",
+  "drafted_by": "greg",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "New Orleans",
+  "name": "Pelicans",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/NOP.svg",
+  "drafted_by": "greg",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "New York",
+  "name": "Knicks",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/NYK.svg",
+  "drafted_by": "tim",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Oklahoma City",
+  "name": "Thunder",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/OKC.svg",
+  "drafted_by": "tim",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Orlando",
+  "name": "Magic",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/ORL.svg",
+  "drafted_by": "tim",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Philadelphia",
+  "name": "76ers",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/PHI.svg",
+  "drafted_by": "tim",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Phoenix",
+  "name": "Suns",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/PHX.svg",
+  "drafted_by": "greg",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Portland",
+  "name": "Trail Blazers",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/POR.svg",
+  "drafted_by": "greg",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Sacramento",
+  "name": "Kings",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/SAC.svg",
+  "drafted_by": "jeff",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "San Antonio",
+  "name": "Spurs",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/SAS.svg",
+  "drafted_by": "tim",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Toronto",
+  "name": "Raptors",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/TOR.svg",
+  "drafted_by": "greg",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Utah",
+  "name": "Jazz",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/UTA.svg",
+  "drafted_by": "zach",
+  "wins": {
+    "2017-10-17": 0
+  }
+}, {
+  "location": "Washington",
+  "name": "Wizards",
+  "image": "http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/WAS.svg",
+  "drafted_by": "jeff",
+  "wins": {
+    "2017-10-17": 0
+  }
+}]
