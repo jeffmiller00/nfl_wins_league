@@ -188,7 +188,8 @@
               ['3', 10, 13, 9, 5, 9],
               ['4', 13, 17, 13, 8, 10],
               ['5', 17, 20, 16, 9, 12],
-              ['6', 18, 20, 20, 15, 15]
+              ['6', 18, 20, 20, 15, 15],
+              ['7', 21, 21, 24, 19, 18]
             ]);
             var options = {
               hAxis: {
@@ -222,39 +223,40 @@
             data.addColumn('number', 'Wk04');
             data.addColumn('number', 'Wk05');
             data.addColumn('number', 'Wk06');
+            data.addColumn('number', 'Wk07');
             data.addRows([
-              ['Zach', 'Cardinals', 0, 1, 1, 2, 2, 3],
-              ['Greg', 'Falcons', 1, 2, 3, 3, 3, 3],
-              ['Jeff', 'Ravens', 1, 2, 2, 2, 3, 3],
-              ['Greg', 'Bills', 1, 1, 2, 3, 3, 3],
-              ['Jeff', 'Panthers', 1, 2, 2, 3, 4, 4],
-              ['Zach', 'Bears', 0, 0, 1, 1, 1, 2],
-              ['Tim', 'Bengals', 0, 0, 0, 1, 2, 2],
-              ['Mike', 'Browns', 0, 0, 0, 0, 0, 0],
-              ['Mike', 'Cowboys', 1, 1, 2, 2, 2, 2],
-              ['Greg', 'Broncos', 1, 2, 2, 3, 3, 3],
-              ['Mike', 'Lions', 1, 2, 2, 3, 3, 3],
-              ['Greg', 'Packers', 1, 1, 2, 3, 4, 4],
-              ['Jeff', 'Texans', 0, 1, 1, 2, 2, 3],
-              ['Greg', 'Colts', 0, 0, 1, 1, 2, 2],
-              ['Jeff', 'Jaguars', 1, 1, 2, 2, 3, 3],
-              ['Greg', 'Chiefs', 1, 2, 3, 4, 5, 5],
-              ['Tim', 'Rams', 1, 1, 2, 3, 3, 4],
-              ['Mike', 'Dolphins', 0, 1, 1, 1, 2, 3],
-              ['Mike', 'Vikings', 1, 1, 2, 2, 3, 4],
-              ['Tim', 'Patriots', 0, 1, 2, 2, 3, 4],
-              ['Zach', 'Giants', 0, 0, 0, 0, 0, 1],
-              ['', 'Jets', 0, 0, 1, 2, 3, 3],
-              ['Zach', 'Saints', 0, 0, 1, 2, 2, 3],
-              ['Tim', 'Eagles', 1, 1, 2, 3, 4, 5],
-              ['Zach', 'Steelers', 1, 2, 2, 3, 3, 4],
-              ['Jeff', 'Raiders', 1, 2, 2, 2, 2, 2],
-              ['Zach', 'Chargers', 0, 0, 0, 0, 1, 2],
-              ['', '49ers', 0, 0, 0, 0, 0, 0],
-              ['Jeff', 'Seahawks', 0, 1, 1, 2, 3, 3],
-              ['Tim', 'Buccaneers', 0, 1, 1, 2, 2, 2],
-              ['Tim', 'Titans', 0, 1, 2, 2, 2, 3],
-              ['Mike', 'Redskins', 0, 1, 2, 2, 2, 3]
+              ['Zach', 'Cardinals', 0, 1, 1, 2, 2, 3, 3],
+              ['Greg', 'Falcons', 1, 2, 3, 3, 3, 3, 3],
+              ['Jeff', 'Ravens', 1, 2, 2, 2, 3, 3, 3],
+              ['Greg', 'Bills', 1, 1, 2, 3, 3, 3, 4],
+              ['Jeff', 'Panthers', 1, 2, 2, 3, 4, 4, 4],
+              ['Zach', 'Bears', 0, 0, 1, 1, 1, 2, 3],
+              ['Tim', 'Bengals', 0, 0, 0, 1, 2, 2, 2],
+              ['Mike', 'Browns', 0, 0, 0, 0, 0, 0, 0],
+              ['Mike', 'Cowboys', 1, 1, 2, 2, 2, 2, 3],
+              ['Greg', 'Broncos', 1, 2, 2, 3, 3, 3, 3],
+              ['Mike', 'Lions', 1, 2, 2, 3, 3, 3, 3],
+              ['Greg', 'Packers', 1, 1, 2, 3, 4, 4, 4],
+              ['Jeff', 'Texans', 0, 1, 1, 2, 2, 3, 3],
+              ['Greg', 'Colts', 0, 0, 1, 1, 2, 2, 2],
+              ['Jeff', 'Jaguars', 1, 1, 2, 2, 3, 3, 4],
+              ['Greg', 'Chiefs', 1, 2, 3, 4, 5, 5, 5],
+              ['Tim', 'Rams', 1, 1, 2, 3, 3, 4, 5],
+              ['Mike', 'Dolphins', 0, 1, 1, 1, 2, 3, 4],
+              ['Mike', 'Vikings', 1, 1, 2, 2, 3, 4, 5],
+              ['Tim', 'Patriots', 0, 1, 2, 2, 3, 4, 5],
+              ['Zach', 'Giants', 0, 0, 0, 0, 0, 1, 1],
+              ['', 'Jets', 0, 0, 1, 2, 3, 3, 3],
+              ['Zach', 'Saints', 0, 0, 1, 2, 2, 3, 4],
+              ['Tim', 'Eagles', 1, 1, 2, 3, 4, 5, 6],
+              ['Zach', 'Steelers', 1, 2, 2, 3, 3, 4, 5],
+              ['Jeff', 'Raiders', 1, 2, 2, 2, 2, 2, 3],
+              ['Zach', 'Chargers', 0, 0, 0, 0, 1, 2, 3],
+              ['', '49ers', 0, 0, 0, 0, 0, 0, 0],
+              ['Jeff', 'Seahawks', 0, 1, 1, 2, 3, 3, 4],
+              ['Tim', 'Buccaneers', 0, 1, 1, 2, 2, 2, 2],
+              ['Tim', 'Titans', 0, 1, 2, 2, 2, 3, 4],
+              ['Mike', 'Redskins', 0, 1, 2, 2, 2, 3, 3]
             ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));

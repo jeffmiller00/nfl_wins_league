@@ -171,7 +171,8 @@ Undrafted:
             data.addColumn('number', 'Zach');
 
             data.addRows([
-              ['10.17', 0, 0, 0, 0]
+              ['2017-10-17', 0, 0, 0, 0],
+              ['2017-10-23', 17, 10, 9, 10]
             ]);
             var options = {
               hAxis: {
@@ -197,8 +198,7 @@ Undrafted:
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Brother');
             data.addColumn('string', 'Team');
-            data.addColumn('number', '10.17');
-            // data.addColumn('number', '11.04');
+            data.addColumn('number', '10.23');
             // data.addColumn('number', '11.11');
             // data.addColumn('number', '11.18');
             // data.addColumn('number', '11.25');
@@ -223,7 +223,36 @@ Undrafted:
             // data.addColumn('number', 'Round 1');
             // data.addColumn('number', 'Round 2');
             data.addRows([
-
+              ['Zach', 'Hawks', 1],
+              ['Zach', 'Celtics', 1],
+              ['', 'Nets', 2],
+              ['Tim', 'Hornets', 1],
+              ['', 'Bulls', 0],
+              ['Zach', 'Cavaliers', 2],
+              ['Greg', 'Mavericks', 0],
+              ['Tim', 'Nuggets', 1],
+              ['Jeff', 'Pistons', 2],
+              ['Greg', 'Warriors', 2],
+              ['Jeff', 'Rockets', 3],
+              ['Zach', 'Pacers', 1],
+              ['Jeff', 'Clippers', 2],
+              ['Zach', 'Lakers', 1],
+              ['Jeff', 'Grizzlies', 3],
+              ['Zach', 'Heat', 2],
+              ['Jeff', 'Bucks', 3],
+              ['Greg', 'Timberwolves', 2],
+              ['Greg', 'Pelicans', 1],
+              ['Tim', 'Knicks', 0],
+              ['Tim', 'Thunder', 1],
+              ['Tim', 'Magic', 2],
+              ['Tim', '76ers', 1],
+              ['Greg', 'Suns', 1],
+              ['Greg', 'Trail Blazers', 2],
+              ['Jeff', 'Kings', 1],
+              ['Tim', 'Spurs', 3],
+              ['Greg', 'Raptors', 2],
+              ['Zach', 'Jazz', 2],
+              ['Jeff', 'Wizards', 3]
             ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));

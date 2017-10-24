@@ -42,7 +42,7 @@ def write_file?; true; end;
 
 if write_file?
   request = HTTPI::Request.new
-  request.url = 'http://www.espn.com/nba/standings/_/season/2017/sort/wins/group/league'
+  request.url = 'http://www.espn.com/nba/standings/_/group/league'
   # request.query = { Season: '2015-16',
   #                   SeasonType: 'Regular%20Season'}
   response = HTTPI.get(request)
