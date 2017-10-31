@@ -172,7 +172,8 @@ Undrafted:
 
             data.addRows([
               ['2017-10-17', 0, 0, 0, 0],
-              ['2017-10-23', 17, 10, 9, 10]
+              ['2017-10-23', 17, 10, 9, 10],
+              ['2017-10-30', 28, 23, 25, 20]
             ]);
             var options = {
               hAxis: {
@@ -199,60 +200,41 @@ Undrafted:
             data.addColumn('string', 'Brother');
             data.addColumn('string', 'Team');
             data.addColumn('number', '10.23');
-            // data.addColumn('number', '11.11');
-            // data.addColumn('number', '11.18');
-            // data.addColumn('number', '11.25');
-            // data.addColumn('number', '12.02');
-            // data.addColumn('number', '12.09');
-            // data.addColumn('number', '12.18');
-            // data.addColumn('number', '12.24');
-            // data.addColumn('number', '1.1');
-            // data.addColumn('number', '1.7');
-            // data.addColumn('number', '1.15');
-            // data.addColumn('number', '1.21');
-            // data.addColumn('number', '1.28');
-            // data.addColumn('number', '2.4');
-            // data.addColumn('number', '2.11');
-            // data.addColumn('number', '2.17');
-            // data.addColumn('number', '2.25');
-            // data.addColumn('number', '3.4');
-            // data.addColumn('number', '3.11');
-            // data.addColumn('number', '3.18');
-            // data.addColumn('number', '3.27');
+            data.addColumn('number', '10.30');
             // data.addColumn('number', 'Season End');
             // data.addColumn('number', 'Round 1');
             // data.addColumn('number', 'Round 2');
             data.addRows([
-              ['Zach', 'Hawks', 1],
-              ['Zach', 'Celtics', 1],
-              ['', 'Nets', 2],
-              ['Tim', 'Hornets', 1],
-              ['', 'Bulls', 0],
-              ['Zach', 'Cavaliers', 2],
-              ['Greg', 'Mavericks', 0],
-              ['Tim', 'Nuggets', 1],
-              ['Jeff', 'Pistons', 2],
-              ['Greg', 'Warriors', 2],
-              ['Jeff', 'Rockets', 3],
-              ['Zach', 'Pacers', 1],
-              ['Jeff', 'Clippers', 2],
-              ['Zach', 'Lakers', 1],
-              ['Jeff', 'Grizzlies', 3],
-              ['Zach', 'Heat', 2],
-              ['Jeff', 'Bucks', 3],
-              ['Greg', 'Timberwolves', 2],
-              ['Greg', 'Pelicans', 1],
-              ['Tim', 'Knicks', 0],
-              ['Tim', 'Thunder', 1],
-              ['Tim', 'Magic', 2],
-              ['Tim', '76ers', 1],
-              ['Greg', 'Suns', 1],
-              ['Greg', 'Trail Blazers', 2],
-              ['Jeff', 'Kings', 1],
-              ['Tim', 'Spurs', 3],
-              ['Greg', 'Raptors', 2],
-              ['Zach', 'Jazz', 2],
-              ['Jeff', 'Wizards', 3]
+              ['Zach', 'Hawks', 1, 1],
+              ['Zach', 'Celtics', 1, 5],
+              ['', 'Nets', 2, 3],
+              ['Tim', 'Hornets', 1, 4],
+              ['', 'Bulls', 0, 1],
+              ['Zach', 'Cavaliers', 2, 3],
+              ['Greg', 'Mavericks', 0, 1],
+              ['Tim', 'Nuggets', 1, 3],
+              ['Jeff', 'Pistons', 2, 5],
+              ['Greg', 'Warriors', 2, 5],
+              ['Jeff', 'Rockets', 3, 5],
+              ['Zach', 'Pacers', 1, 3],
+              ['Jeff', 'Clippers', 2, 4],
+              ['Zach', 'Lakers', 1, 2],
+              ['Jeff', 'Grizzlies', 3, 5],
+              ['Zach', 'Heat', 2, 2],
+              ['Jeff', 'Bucks', 3, 4],
+              ['Greg', 'Timberwolves', 2, 4],
+              ['Greg', 'Pelicans', 1, 3],
+              ['Tim', 'Knicks', 0, 3],
+              ['Tim', 'Thunder', 1, 3],
+              ['Tim', 'Magic', 2, 5],
+              ['Tim', '76ers', 1, 3],
+              ['Greg', 'Suns', 1, 2],
+              ['Greg', 'Trail Blazers', 2, 4],
+              ['Jeff', 'Kings', 1, 1],
+              ['Tim', 'Spurs', 3, 4],
+              ['Greg', 'Raptors', 2, 4],
+              ['Zach', 'Jazz', 2, 4],
+              ['Jeff', 'Wizards', 3, 4]
             ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));
