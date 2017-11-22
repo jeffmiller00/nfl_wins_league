@@ -154,48 +154,54 @@ Undrafted:
         </script>
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://unpkg.com/frappe-charts@0.0.7/dist/frappe-charts.min.iife.js"></script>
         <script>
           function drawAllCharts() {
-            drawLineStyles();
+            // drawLineStyles();
+            drawFrappeLines();
             drawTable();
           }
-          google.charts.load('current', {packages: ['corechart', 'line', 'table']});
-          google.charts.setOnLoadCallback(drawAllCharts);
 
-          function drawLineStyles() {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Date');
-            data.addColumn('number', 'Jeff');
-            data.addColumn('number', 'Greg');
-            data.addColumn('number', 'Tim');
-            data.addColumn('number', 'Zach');
+          function drawFrappeLines() {
+            const data = {
+                labels: ['10.23','10.30','11.06','11.13','11.21'],
+                datasets: [
+                    {
+                        title: "Jeff",
+                        color: '#BA0C2F',
+                        values: [17,28,36,51,58]
+                    },
+                    {
+                        title: "Greg",
+                        color: "#003DA5",
+                        values: [10,23,36,48,63]
+                    },
+                    {
+                        title: "Tim",
+                        color: "#F05133",
+                        values: [9,25,36,49,61]
+                    },
+                    {
+                        title: "Zach",
+                        color: "#FFB81C",
+                        values: [10,20,34,45,60]
+                    }
+                ]
+            }
 
-            data.addRows([
-              ['2017-10-17', 0, 0, 0, 0],
-              ['2017-10-23', 17, 10, 9, 10],
-              ['2017-10-30', 28, 23, 25, 20],
-              ['2017-11-06', 36, 36, 36, 34],
-              ['2017-11-13', 51, 48, 49, 45]
-            ]);
-            var options = {
-              hAxis: {
-                title: 'Date'
-              },
-              vAxis: {
-                title: 'Wins'
-              },
-              colors: ['#BA0C2F', '#003DA5', '#F05133', '#FFB81C'],
-              series: {
-                0: { lineWidth: 4 },
-                1: { lineWidth: 4 },
-                2: { lineWidth: 4 },
-                3: { lineWidth: 4 }
-              }
-            };
-
-            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
+            const chart = new Chart({
+                parent: '#chart_div',
+                data: data,
+                type: 'line', // or 'line', 'scatter', 'percentage'
+                colors: ['#BA0C2F', '#003DA5', '#FFB81C', '#007DC3'],
+                height: 400
+            })
           }
+
+          // ------------------------------------------------------------------------------ //
+
+          google.charts.load('current', {packages: ['corechart', 'table']});
+          google.charts.setOnLoadCallback(drawAllCharts);
 
           function drawTable() {
             var data = new google.visualization.DataTable();
