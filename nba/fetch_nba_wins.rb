@@ -1,7 +1,7 @@
 require 'httpi'
 require 'nokogiri'
 require 'json'
-require 'pry-coolline'
+require 'pry'
 
 def get_teams
   all_teams = File.read('./nba_2017.json')
@@ -33,14 +33,18 @@ def generate_summary_chart
     end
   end
 
-  weeklySummary.sort.each do |date, summary|
-    puts "['#{date}', #{summary[:jeff]}, #{summary[:greg]}, #{summary[:tim]}, #{summary[:zach]}],"
-  end
+  allSummaries = []
+  allSummaries << weeklySummary.map{ |summary| summary[1][:jeff] }
+  allSummaries << weeklySummary.map{ |summary| summary[1][:greg] }
+  allSummaries << weeklySummary.map{ |summary| summary[1][:tim] }
+  allSummaries << weeklySummary.map{ |summary| summary[1][:zach] }
+  puts allSummaries.to_s
 end
 
+def fetch_wins?; false; end;
 def write_file?; true; end;
 
-if write_file?
+if fetch_wins?
   request = HTTPI::Request.new
   request.url = 'http://www.espn.com/nba/standings/_/group/league'
   # request.query = { Season: '2015-16',
@@ -58,9 +62,11 @@ if write_file?
     team['wins'][Date.today.prev_day.to_s] = wins
   end
 
-  FileUtils.copy('./nba_2017.json', "./archive/nba_2017_#{Date.today}.json")
-  File.open('./nba_2017.json',"w") do |f|
-    f.write(all_teams.to_json)
+  if write_file?
+    FileUtils.copy('./nba_2017.json', "./archive/nba_2017_#{Date.today}.json")
+    File.open('./nba_2017.json',"w") do |f|
+      f.write(all_teams.to_json)
+    end
   end
 end
 

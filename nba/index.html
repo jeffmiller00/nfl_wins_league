@@ -163,28 +163,29 @@ Undrafted:
           }
 
           function drawFrappeLines() {
+            var allWins = [[17, 28, 36, 51, 58, 69], [10, 23, 36, 48, 63, 75], [9, 25, 36, 49, 61, 69], [10, 20, 34, 45, 60, 74]]
             const data = {
                 labels: ['10.23','10.30','11.06','11.13','11.21','11.28'],
                 datasets: [
                     {
                         title: "Jeff",
                         color: '#BA0C2F',
-                        values: [17,28,36,51,58,69]
+                        values: allWins[0]
                     },
                     {
                         title: "Greg",
                         color: "#003DA5",
-                        values: [10,23,36,48,63,75]
+                        values: allWins[1]
                     },
                     {
                         title: "Tim",
                         color: "#F05133",
-                        values: [9,25,36,49,61,69]
+                        values: allWins[2]
                     },
                     {
                         title: "Zach",
                         color: "#FFB81C",
-                        values: [10,20,34,45,60,74]
+                        values: allWins[3]
                     }
                 ]
             }
