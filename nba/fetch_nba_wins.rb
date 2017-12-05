@@ -41,7 +41,7 @@ def generate_summary_chart
   puts allSummaries.to_s
 end
 
-def fetch_wins?; false; end;
+def fetch_wins?; true; end;
 def write_file?; true; end;
 
 if fetch_wins?

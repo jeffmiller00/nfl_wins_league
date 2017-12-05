@@ -19,7 +19,7 @@ def generate_team_table
 end
 
 EMPTY_WEEK = {jeff: 0, greg: 0, tim: 0, zach: 0, mike: 0}
-CURRENT_NFL_WEEK = 12
+CURRENT_NFL_WEEK = 13
 
 def generate_summary_chart
   all_teams = get_teams
@@ -55,7 +55,7 @@ def generate_summary_chart
   puts allSummaries.to_s
 end
 
-def fetch_wins?; false; end;
+def fetch_wins?; true; end;
 def write_file?; true; end;
 
 if fetch_wins?
