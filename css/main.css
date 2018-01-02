@@ -1,22 +1,35 @@
 
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+body {
+   padding-top: 50px;
+   padding-bottom: 20px;
+}
+.img-logo {
+ max-width: 100%;
+ height: auto;
+}
+ol {
+ padding-left: 0;
+ text-align: center;
+}
+
+@media screen and (min-width: 200px) {
+ h1, h3, h4, li { font-size: 0.7em; }
+}
+@media screen and (min-width: 400px) {
+ h1, h3, h4, li { font-size: 0.8em; }
+}
+@media screen and (min-width: 600px) {
+ h1, h3, h4, li { font-size: 0.9em; }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.out {
+  background-color: #eee;
+}
+.out img {
+  opacity: 0.1;
+}
