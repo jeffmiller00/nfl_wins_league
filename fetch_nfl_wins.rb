@@ -4,7 +4,7 @@ require 'json'
 require 'pry'
 
 def get_teams
-  all_teams = File.read('./nfl_2017.json')
+  all_teams = File.read('./nfl_2018.json')
   JSON.parse(all_teams)
 end
 
@@ -24,8 +24,8 @@ CURRENT_NFL_WEEK = 17
 def generate_summary_chart
   all_teams = get_teams
   weeklySummary = []
-  week1begin = Date.parse('2017-09-07')
-  week1end   = Date.parse('2017-09-11')
+  week1begin = Date.parse('2018-09-06')
+  week1end   = Date.parse('2018-09-10')
   CURRENT_NFL_WEEK.times do |i|
     weeklySummary[i] = EMPTY_WEEK.dup
     weekBegin = week1begin.next_day(7*i)
@@ -67,7 +67,7 @@ if fetch_wins?
   full_doc = Nokogiri::HTML(response.body)
   truth_teams = full_doc.xpath('//*[@id="layoutRailRight"]/div[1]/*/tr')
 
-  all_teams = File.read('./nfl_2017.json')
+  all_teams = File.read('./nfl_2018.json')
   all_teams = JSON.parse(all_teams)
 
   all_teams.each do |team|
@@ -83,8 +83,8 @@ if fetch_wins?
   end
 
   if write_file?
-    FileUtils.copy('./nfl_2017.json', "./archive/nfl_2017_#{Date.today}.json")
-    File.open('./nfl_2017.json',"w") do |f|
+    FileUtils.copy('./nfl_2018.json', "./archive/nfl_2018_#{Date.today}.json")
+    File.open('./nfl_2018.json',"w") do |f|
       f.write(all_teams.to_json)
     end
   end

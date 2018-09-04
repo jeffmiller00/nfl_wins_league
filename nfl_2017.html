@@ -1,0 +1,262 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Brothers NFL league wins</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Miller Brothers NFL Wins League</a>
+        </div>
+        <a class="btn btn-default navbar-right" href="nba/index.html">NBA</a>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div id="chart_div"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-xs-2">
+          <h1>Tim</h1>
+          <h3><em>Pick: 1</em></h3>
+          <ol>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/NE/NE_logo-80x90.gif"><h4>New England Patriots</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/TEN/TEN_logo-80x90.gif"><h4>Tennessee Titans</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/TB/TB_logo-80x90.gif"><h4>Tampa Bay Buccaneers</h4></li>
+            <li><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/PHI/PHI_logo-80x90.gif"><h4>Philadelphia Eagles</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/CIN/CIN_logo-80x90.gif"><h4>Cincinnati Bengals</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/LA/LA_logo-80x90.gif"><h4>Los Angeles Rams</h4></li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Mike</h1>
+          <h3><em>Pick: 2</em></h3>
+          <ol>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/DAL/DAL_logo-80x90.gif"><h4>Dallas Cowboys</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/MIN/MIN_logo-80x90.gif"><h4>Minnesota Vikings</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/MIA/MIA_logo-80x90.gif"><h4>Miami Dolphins</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/DET/DET_logo-80x90.gif"><h4>Detroit Lions</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/WAS/WAS_logo-80x90.gif"><h4>Washington Redskins</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/CLE/CLE_logo-80x90.gif"><h4>Cleveland Browns</h4></li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Zach</h1>
+          <h3><em>Pick: 3</em></h3>
+          <ol>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/PIT/PIT_logo-80x90.gif"><h4>Pittsburgh Steelers</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/ARI/ARI_logo-80x90.gif"><h4>Arizona Cardinals</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/NYG/NYG_logo-80x90.gif"><h4>New York Giants</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/SD/SD_logo-80x90.gif"><h4>San Diego Chargers</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/NO/NO_logo-80x90.gif"><h4>New Orleans Saints</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/CHI/CHI_logo-80x90.gif"><h4>Chicago Bears</h4></li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Jeff</h1>
+          <h3><em>Pick: 4</em></h3>
+          <ol>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/SEA/SEA_logo-80x90.gif"><h4>Seattle Seahawks</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/OAK/OAK_logo-80x90.gif"><h4>Oakland Raiders</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/CAR/CAR_logo-80x90.gif"><h4>Carolina Panthers</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/HOU/HOU_logo-80x90.gif"><h4>Houston Texans</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/BAL/BAL_logo-80x90.gif"><h4>Baltimore Ravens</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/JAX/JAX_logo-80x90.gif  "><h4>Jacksonville Jaguars</h4></li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Greg</h1>
+          <h3><em>Pick: 5</em></h3>
+          <ol>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/ATL/ATL_logo-80x90.gif"><h4>Atlanta Falcons</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/GB/GB_logo-80x90.gif"><h4>Green Bay Packers</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/KC/KC_logo-80x90.gif"><h4>Kansas City Chiefs</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/DEN/DEN_logo-80x90.gif"><h4>Denver Broncos</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/IND/IND_logo-80x90.gif"><h4>Indianapolis Colts</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/BUF/BUF_logo-80x90.gif"><h4>Buffalo Bills</h4></li>
+          </ol>
+       </div>
+        <div class="col-xs-2">
+          <h1>Undrafted</h1>
+          <ol>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/SF/SF_logo-80x90.gif"><h4>San Francisco 49ers</h4></li>
+            <li class="out"><img class='img-fluid img-logo' src="http://i.nflcdn.com/static/site/7.4/img/teams/NYJ/NYJ_logo-80x90.gif"><h4>New York Jets</h4></li>
+          </ol>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div id="table_div"></div>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <a href='https://about.me/jeffmiller00'>Jeff Miller</a> <a href="https://twitter.com/couchchamp" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @couchchamp</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </footer>
+    </div> <!-- /container -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-69056626-3', 'auto');
+          ga('send', 'pageview');
+        </script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://unpkg.com/frappe-charts@0.0.7/dist/frappe-charts.min.iife.js"></script>
+        <script>
+          function drawAllCharts() {
+            drawFrappeLines();
+            drawTable();
+          }
+
+          function drawFrappeLines() {
+            var allWins = [[4, 9, 10, 13, 17, 18, 21, 24, 27, 30, 33, 38, 43, 46, 46, 49, 49, 50, 51, 51, 51], [5, 8, 13, 17, 20, 20, 21, 24, 25, 27, 28, 30, 35, 40, 40, 41, 45, 46, 46, 46, 46], [2, 5, 9, 13, 16, 20, 24, 27, 30, 34, 38, 43, 47, 50, 50, 54, 58, 59, 61, 63, 64], [1, 3, 5, 8, 9, 15, 19, 21, 23, 25, 29, 32, 35, 40, 40, 45, 49, 50, 50, 50, 50], [3, 6, 9, 10, 12, 15, 18, 20, 23, 25, 27, 30, 34, 39, 39, 41, 44, 44, 45, 45, 45]]
+
+            const data = {
+                labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,'WC','Div','Conf','SB'],
+                datasets: [
+                    {
+                        title: "Jeff",
+                        values: allWins[0]
+                    },
+                    {
+                        title: "Greg",
+                        values: allWins[1]
+                    },
+                    {
+                        title: "Tim",
+                        values: allWins[2]
+                    },
+                    {
+                        title: "Zach",
+                        values: allWins[3]
+                    },
+                    {
+                        title: "Mike",
+                        values: allWins[4]
+                    }
+                ]
+            }
+
+            const chart = new Chart({
+                parent: '#chart_div',
+                data: data,
+                type: 'line', // or 'line', 'scatter', 'percentage'
+                colors: ['#4DFF00', '#A6192E', '#0C2340', '#FFB81C', '#869397'],
+                height: 400
+            })
+          }
+
+    // ------------------------------------------------------------------------------ //
+
+          google.charts.load('current', {packages: ['corechart', 'line', 'table']});
+          google.charts.setOnLoadCallback(drawAllCharts);
+
+          function drawTable() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Brother');
+            data.addColumn('string', 'Team');
+            data.addColumn('number', 'Wk01');
+            data.addColumn('number', 'Wk02');
+            data.addColumn('number', 'Wk03');
+            data.addColumn('number', 'Wk04');
+            data.addColumn('number', 'Wk05');
+            data.addColumn('number', 'Wk06');
+            data.addColumn('number', 'Wk07');
+            data.addColumn('number', 'Wk08');
+            data.addColumn('number', 'Wk09');
+            data.addColumn('number', 'Wk10');
+            data.addColumn('number', 'Wk11');
+            data.addColumn('number', 'Wk12');
+            data.addColumn('number', 'Wk13');
+            data.addColumn('number', 'Wk14');
+            data.addColumn('number', 'Wk15');
+            data.addColumn('number', 'Wk16');
+            data.addColumn('number', 'Wk17');
+            data.addColumn('number', 'WC');
+            data.addColumn('number', 'Div');
+            data.addColumn('number', 'Conf');
+            data.addColumn('number', 'SB');
+            data.addRows([
+              ['Tim', 'Eagles', 1, 1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10, 11, 12, 12, 13, 13, 13, 14, 15, 16],
+
+              ['Tim', 'Patriots', 0, 1, 2, 2, 3, 4, 5, 6, 6, 7, 8, 9, 10, 11, 11, 12, 13, 13, 14, 15, 15],
+              ['Jeff', 'Jaguars', 1, 1, 2, 2, 3, 3, 4, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 12, 12, 12],
+              ['Mike', 'Vikings', 1, 1, 2, 2, 3, 4, 5, 6, 6, 7, 8, 9, 10, 11, 11, 12, 13, 13, 14, 14, 14],
+              ['Greg', 'Falcons', 1, 2, 3, 3, 3, 3, 3, 4, 4, 5, 6, 7, 8, 9, 9, 9, 10, 11, 11, 11, 11],
+              ['Zach', 'Saints', 0, 0, 1, 2, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10, 10, 11, 11, 12, 12, 12, 12],
+              ['Zach', 'Steelers', 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9, 10, 11, 11, 12, 13, 13, 13, 13, 13],
+              ['Tim', 'Titans', 0, 1, 2, 2, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8, 8, 8, 9, 10, 10,10,10],
+              ['Zach', 'Cardinals', 0, 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6, 6, 7, 8, 8, 8,8,8],
+              ['Jeff', 'Ravens', 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 6, 7, 8, 8, 9, 9, 9, 9,9,9],
+              ['Greg', 'Bills', 1, 1, 2, 3, 3, 3, 4, 5, 5, 5, 5, 6, 7, 8, 8, 8, 9, 9, 9,9,9],
+              ['Jeff', 'Panthers', 1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 7, 8, 9, 10, 10, 11, 11, 11, 11,11,11],
+              ['Zach', 'Bears', 0, 0, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5,5,5],
+              ['Tim', 'Bengals', 0, 0, 0, 1, 2, 2, 2, 3, 3, 3, 4, 5, 5, 5, 5, 6, 7, 7, 7,7,7],
+              ['Mike', 'Browns', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0,0],
+              ['Mike', 'Cowboys', 1, 1, 2, 2, 2, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 8, 9, 9, 9,9,9],
+              ['Greg', 'Broncos', 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 5, 5, 5, 5, 5, 5,5,5],
+              ['Mike', 'Lions', 1, 2, 2, 3, 3, 3, 3, 3, 4, 5, 6, 6, 7, 8, 8, 8, 9, 9, 9,9,9],
+              ['Greg', 'Packers', 1, 1, 2, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7,7,7],
+              ['Jeff', 'Texans', 0, 1, 1, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4,4,4],
+              ['Greg', 'Colts', 0, 0, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4,4,4],
+              ['Greg', 'Chiefs', 1, 2, 3, 4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 8, 8, 9, 10, 10, 10,10,10],
+              ['Tim', 'Rams', 1, 1, 2, 3, 3, 4, 5, 5, 6, 7, 7, 8, 9, 10, 10, 11, 11, 11, 11,11,11],
+              ['Mike', 'Dolphins', 0, 1, 1, 1, 2, 3, 4, 4, 4, 4, 4, 4, 5, 6, 6, 6, 6, 6, 6,6,6],
+              ['Zach', 'Giants', 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3,3,3],
+              ['', 'Jets', 0, 0, 1, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5,5,5],
+              ['Jeff', 'Raiders', 1, 2, 2, 2, 2, 2, 3, 3, 4, 4, 4, 5, 6, 6, 6, 6, 6, 6, 6,6,6],
+              ['Zach', 'Chargers', 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 4, 5, 6, 7, 7, 8, 9, 9, 9,9,9],
+              ['', '49ers', 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 3, 4, 4, 5, 6, 6, 6,6,6],
+              ['Jeff', 'Seahawks', 0, 1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 7, 8, 8, 8, 9, 9, 9, 9,9,9],
+              ['Tim', 'Buccaneers', 0, 1, 1, 2, 2, 2, 2, 2, 2, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5,5,5],
+              ['Mike', 'Redskins', 0, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6, 6, 7, 7, 7, 7,7,7]
+            ]);
+
+            var table = new google.visualization.Table(document.getElementById('table_div'));
+
+            table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
+          }
+        </script>
+    </body>
+</html>
