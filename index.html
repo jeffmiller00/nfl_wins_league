@@ -150,10 +150,10 @@
           }
 
           function drawFrappeLines() {
-            var allWins = [[0], [0], [0], [0], [0]]
+            var allWins = [[0,4], [0,4], [0,4], [0,1], [0,1]]
 
             const data = {
-                labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,'WC','Div','Conf','SB'],
+                labels: ['Pre',1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,'WC','Div','Conf','SB'],
                 datasets: [
                     {
                         title: "Jeff",
@@ -182,7 +182,7 @@
                 parent: '#chart_div',
                 data: data,
                 type: 'line', // or 'line', 'scatter', 'percentage'
-                colors: ['#4DFF00', '#A6192E', '#0C2340', '#FFB81C', '#869397'],
+                colors: ['#004C54', '#C60C30', '#4F2683', '#FFB612', '#0076B6'],
                 height: 400
             })
           }
@@ -198,38 +198,38 @@
             data.addColumn('string', 'Team');
             data.addColumn('number', 'Wk01');
             data.addRows([
-              ['Jeff', 'Eagles', 0],
-              ['Greg', 'Patriots', 0],
-              ['Greg', 'Jaguars', 0],
-              ['Tim', 'Vikings', 0],
-              ['Greg', 'Falcons', 0],
-              ['Jeff', 'Saints', 0],
-              ['Zach', 'Steelers', 0],
-              ['Greg', 'Titans', 0],
               ['Zach', 'Cardinals', 0],
-              ['Greg', 'Ravens', 0],
+              ['Greg', 'Falcons', 0],
+              ['Greg', 'Ravens', 1],
               ['', 'Bills', 0],
-              ['Tim', 'Panthers', 0],
+              ['Tim', 'Panthers', 1],
               ['Mike', 'Bears', 0],
-              ['Jeff', 'Bengals', 0],
+              ['Jeff', 'Bengals', 1],
               ['Mike', 'Browns', 0],
               ['Tim', 'Cowboys', 0],
-              ['Jeff', 'Broncos', 0],
+              ['Jeff', 'Broncos', 1],
               ['Mike', 'Lions', 0],
-              ['Zach', 'Packers', 0],
+              ['Zach', 'Packers', 1],
               ['Mike', 'Texans', 0],
               ['Zach', 'Colts', 0],
-              ['Jeff', 'Chiefs', 0],
-              ['Tim', 'Rams', 0],
-              ['', 'Dolphins', 0],
+              ['Greg', 'Jaguars', 1],
+              ['Jeff', 'Chiefs', 1],
+              ['Tim', 'Rams', 1],
+              ['', 'Dolphins', 1],
+              ['Tim', 'Vikings', 1],
+              ['Greg', 'Patriots', 1],
               ['Tim', 'Giants', 0],
-              ['Tim', 'Jets', 0],
+              ['Tim', 'Jets', 1],
+              ['Jeff', 'Saints', 0],
+              ['Jeff', 'Eagles', 1],
+              ['Zach', 'Steelers', 0],
               ['Mike', 'Raiders', 0],
               ['Zach', 'Chargers', 0],
               ['Jeff', '49ers', 0],
               ['Zach', 'Seahawks', 0],
-              ['Greg', 'Buccaneers', 0],
-              ['Mike', 'Redskins', 0]
+              ['Greg', 'Buccaneers', 1],
+              ['Greg', 'Titans', 0],
+              ['Mike', 'Redskins', 1]
             ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));

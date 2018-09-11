@@ -41,7 +41,7 @@ def generate_summary_chart
   puts allSummaries.to_s
 end
 
-def fetch_wins?; true; end;
+def fetch_wins?; false; end;
 def write_file?; true; end;
 
 if fetch_wins?
@@ -57,16 +57,16 @@ if fetch_wins?
   all_teams = JSON.parse(all_teams)
 
   all_teams.each do |team|
-    if truth_teams.search("[text()*='#{team['location']}']").first
-      wins = truth_teams.search("[text()*='#{team['location']}']").first.parent.parent.children[1].text.to_i
-    elsif truth_teams.search("[text()*='#{team['name']}']").first
-      wins = truth_teams.search("[text()*='#{team['name']}']").first.parent.parent.children[1].text.to_i
-    elsif truth_teams.search("[text()*='#{team['alt_location']}']").first
-      wins = truth_teams.search("[text()*='#{team['alt_location']}']").first.parent.parent.children[1].text.to_i
-    else
-      binding.pry
-    end
-    team['wins'][Date.today.prev_day.to_s] = wins
+    # if truth_teams.search("[text()*='#{team['location']}']").first
+    #   wins = truth_teams.search("[text()*='#{team['location']}']").first.parent.parent.children[1].text.to_i
+    # elsif truth_teams.search("[text()*='#{team['name']}']").first
+    #   wins = truth_teams.search("[text()*='#{team['name']}']").first.parent.parent.children[1].text.to_i
+    # elsif truth_teams.search("[text()*='#{team['alt_location']}']").first
+    #   wins = truth_teams.search("[text()*='#{team['alt_location']}']").first.parent.parent.children[1].text.to_i
+    # else
+    #   binding.pry
+    # end
+    team['wins'][Date.today.prev_day.to_s] = team['wins']['2018-04-12']
   end
 
   if write_file?

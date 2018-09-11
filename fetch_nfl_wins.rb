@@ -60,21 +60,22 @@ def write_file?; true; end;
 
 if fetch_wins?
   request = HTTPI::Request.new
-  request.url = 'https://www.cbssports.com/nfl/standings'
+  request.url = 'https://www.cbssports.com/nfl/standings/'
   # request.query = { Season: '2015-16',
   #                   SeasonType: 'Regular%20Season'}
   response = HTTPI.get(request)
   full_doc = Nokogiri::HTML(response.body)
-  truth_teams = full_doc.xpath('//*[@id="layoutRailRight"]/div[1]/*/tr')
+  truth_teams = full_doc.xpath('//table[@class="TableBase-table"]/tr')
+
 
   all_teams = File.read('./nfl_2018.json')
   all_teams = JSON.parse(all_teams)
 
   all_teams.each do |team|
     if truth_teams.search("[text()*='#{team['location']}']").first
-      wins = truth_teams.search("[text()*='#{team['location']}']").first.parent.parent.children[1].text.to_i
+      wins = truth_teams.search("[text()*='#{team['location']}']").first.parent.parent.parent.parent.children[2].text.to_i
     elsif truth_teams.search("[text()*='#{team['name']}']").first
-      wins = truth_teams.search("[text()*='#{team['name']}']").first.parent.parent.children[1].text.to_i
+      wins = truth_teams.search("[text()*='#{team['name']}']").first.parent.parent.parent.parent.children[2].text.to_i
     else
       binding.pry
     end
