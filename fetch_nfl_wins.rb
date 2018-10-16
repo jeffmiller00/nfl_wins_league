@@ -19,7 +19,7 @@ def generate_team_table
 end
 
 EMPTY_WEEK = {jeff: 0, greg: 0, tim: 0, zach: 0, mike: 0}
-CURRENT_NFL_WEEK = 5
+CURRENT_NFL_WEEK = 6
 
 def generate_summary_chart
   all_teams = get_teams
@@ -73,9 +73,9 @@ if fetch_wins?
 
   all_teams.each do |team|
     if truth_teams.search("[text()*='#{team['location']}']").first
-      wins = truth_teams.search("[text()*='#{team['location']}']").first.parent.parent.parent.parent.children[2].text.to_i
+      wins = truth_teams.search("[text()*='#{team['location']}']").first.parent.parent.parent.parent.parent.children[2].text.to_i
     elsif truth_teams.search("[text()*='#{team['name']}']").first
-      wins = truth_teams.search("[text()*='#{team['name']}']").first.parent.parent.parent.parent.children[2].text.to_i
+      wins = truth_teams.search("[text()*='#{team['name']}']").first.parent.parent.parent.parent.parent.children[2].text.to_i
     else
       binding.pry
     end
@@ -84,7 +84,7 @@ if fetch_wins?
   end
 
   if write_file?
-    FileUtils.copy('./nfl_2018.json', "./archive/nfl_2018_#{Date.today}.json")
+    FileUtils.copy('./nfl_2018.json', "./archive/nfl_#{Date.today}.json")
     File.open('./nfl_2018.json',"w") do |f|
       f.write(all_teams.to_json)
     end

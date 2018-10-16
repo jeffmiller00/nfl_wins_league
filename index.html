@@ -150,10 +150,10 @@
           }
 
           function drawFrappeLines() {
-            var allWins = [[4, 9, 12, 15, 0], [4, 8, 10, 14, 0], [4, 6, 9, 11, 0], [1, 3, 5, 8, 0], [1, 2, 6, 9, 0]]
+            var allWins = [[4, 9, 12, 15, 18, 19], [4, 8, 10, 14, 15, 18], [4, 6, 9, 11, 15, 19], [1, 3, 5, 8, 11, 15], [1, 2, 6, 9, 12, 14]]
 
             const data = {
-                labels: [1,2,3,4,5],//,6,7,8,9,10,11,12,13,14,15,16,17,'WC','Div','Conf','SB'],
+                labels: [1,2,3,4,5,6],//,7,8,9,10,11,12,13,14,15,16,17,'WC','Div','Conf','SB'],
                 datasets: [
                     {
                         title: "Jeff",
@@ -201,39 +201,40 @@
             data.addColumn('number', 'Wk03');
             data.addColumn('number', 'Wk04');
             data.addColumn('number', 'Wk05');
+            data.addColumn('number', 'Wk06');
             data.addRows([
-              ['Zach', 'Cardinals', 0, 0, 0, 0, 0],
-              ['Greg', 'Falcons', 0, 1, 1, 1, 0],
-              ['Greg', 'Ravens', 1, 1, 2, 3, 0],
-              ['', 'Bills', 0, 0, 1, 1, 0],
-              ['Tim', 'Panthers', 1, 1, 2, 2, 0],
-              ['Mike', 'Bears', 0, 1, 2, 3, 0],
-              ['Jeff', 'Bengals', 1, 2, 2, 3, 0],
-              ['Mike', 'Browns', 0, 0, 1, 1, 0],
-              ['Tim', 'Cowboys', 0, 1, 1, 2, 0],
-              ['Jeff', 'Broncos', 1, 2, 2, 2, 0],
-              ['Mike', 'Lions', 0, 0, 1, 1, 0],
-              ['Zach', 'Packers', 1, 1, 1, 2, 0],
-              ['Mike', 'Texans', 0, 0, 0, 1, 0],
-              ['Zach', 'Colts', 0, 1, 1, 1, 0],
-              ['Greg', 'Jaguars', 1, 2, 2, 3, 0],
-              ['Jeff', 'Chiefs', 1, 2, 3, 4, 0],
-              ['Tim', 'Rams', 1, 2, 3, 4, 0],
-              ['', 'Dolphins', 1, 2, 3, 3, 0],
-              ['Tim', 'Vikings', 1, 1, 1, 1, 0],
-              ['Greg', 'Patriots', 1, 1, 1, 2, 0],
-              ['Tim', 'Giants', 0, 0, 1, 1, 0],
-              ['Tim', 'Jets', 1, 1, 1, 1, 0],
-              ['Jeff', 'Saints', 0, 1, 2, 3, 0],
-              ['Jeff', 'Eagles', 1, 1, 2, 2, 0],
-              ['Zach', 'Steelers', 0, 0, 1, 1, 0],
-              ['Mike', 'Raiders', 0, 0, 0, 1, 0],
-              ['Zach', 'Chargers', 0, 1, 1, 2, 0],
-              ['Jeff', '49ers', 0, 1, 1, 1, 0],
-              ['Zach', 'Seahawks', 0, 0, 1, 2, 0],
-              ['Greg', 'Buccaneers', 1, 2, 2, 2, 0],
-              ['Greg', 'Titans', 0, 1, 2, 3, 0],
-              ['Mike', 'Redskins', 1, 1, 2, 2, 0]
+              ['Zach', 'Cardinals', 0, 0, 0, 0, 1, 1],
+              ['Greg', 'Falcons', 0, 1, 1, 1, 1, 2],
+              ['Greg', 'Ravens', 1, 1, 2, 3, 3, 4],
+              ['', 'Bills', 0, 0, 1, 1, 2, 2],
+              ['Tim', 'Panthers', 1, 1, 2, 2, 3, 3],
+              ['Mike', 'Bears', 0, 1, 2, 3, 3, 3],
+              ['Jeff', 'Bengals', 1, 2, 2, 3, 4, 4],
+              ['Mike', 'Browns', 0, 0, 1, 1, 2, 2],
+              ['Tim', 'Cowboys', 0, 1, 1, 2, 2, 3],
+              ['Jeff', 'Broncos', 1, 2, 2, 2, 2, 2],
+              ['Mike', 'Lions', 0, 0, 1, 1, 2, 2],
+              ['Zach', 'Packers', 1, 1, 1, 2, 2, 3],
+              ['Mike', 'Texans', 0, 0, 0, 1, 2, 3],
+              ['Zach', 'Colts', 0, 1, 1, 1, 1, 1],
+              ['Greg', 'Jaguars', 1, 2, 2, 3, 3, 3],
+              ['Jeff', 'Chiefs', 1, 2, 3, 4, 5, 5],
+              ['Tim', 'Rams', 1, 2, 3, 4, 5, 6],
+              ['', 'Dolphins', 1, 2, 3, 3, 3, 4],
+              ['Tim', 'Vikings', 1, 1, 1, 1, 2, 3],
+              ['Greg', 'Patriots', 1, 1, 1, 2, 3, 4],
+              ['Tim', 'Giants', 0, 0, 1, 1, 1, 1],
+              ['Tim', 'Jets', 1, 1, 1, 1, 2, 3],
+              ['Jeff', 'Saints', 0, 1, 2, 3, 4, 4],
+              ['Jeff', 'Eagles', 1, 1, 2, 2, 2, 3],
+              ['Zach', 'Steelers', 0, 0, 1, 1, 2, 3],
+              ['Mike', 'Raiders', 0, 0, 0, 1, 1, 1],
+              ['Zach', 'Chargers', 0, 1, 1, 2, 3, 4],
+              ['Jeff', '49ers', 0, 1, 1, 1, 1, 1],
+              ['Zach', 'Seahawks', 0, 0, 1, 2, 2, 3],
+              ['Greg', 'Buccaneers', 1, 2, 2, 2, 2, 2],
+              ['Greg', 'Titans', 0, 1, 2, 3, 3, 3],
+              ['Mike', 'Redskins', 1, 1, 2, 2, 2, 3]
             ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));
