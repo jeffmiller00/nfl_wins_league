@@ -4,7 +4,7 @@ require 'json'
 require 'pry'
 
 def get_teams
-  all_teams = File.read('./nba_2017.json')
+  all_teams = File.read('./nba_2018.json')
   JSON.parse(all_teams)
 end
 
@@ -29,7 +29,8 @@ def generate_summary_chart
     brother = team['drafted_by'].downcase
     team['wins'].each do |date, wins|
       weeklySummary[date.to_s] = EMPTY_WEEK.dup if weeklySummary[date].nil?
-      weeklySummary[date][brother.to_sym] += wins
+      weeklySummary[date.to_s][brother.to_sym] = 0 if weeklySummary[date][brother.to_sym].nil?
+      weeklySummary[date.to_s][brother.to_sym] += wins
     end
   end
 
@@ -41,37 +42,30 @@ def generate_summary_chart
   puts allSummaries.to_s
 end
 
-def fetch_wins?; false; end;
+def fetch_wins?; true; end;
 def write_file?; true; end;
 
 if fetch_wins?
   request = HTTPI::Request.new
-  request.url = 'https://www.cbssports.com/nba/standings'
+  request.url = 'http://data.nba.net/data/10s/prod/v1/current/standings_all_no_sort_keys.json'
   # request.query = { Season: '2015-16',
   #                   SeasonType: 'Regular%20Season'}
   response = HTTPI.get(request)
-  full_doc = Nokogiri::HTML(response.body)
-  truth_teams = full_doc.xpath('//*[@id="sortableContent"]/*/tr')
+  truth_teams = JSON.parse(response.body)
+  truth_teams = truth_teams['league']['standard']['teams']
 
-  all_teams = File.read('./nba_2017.json')
-  all_teams = JSON.parse(all_teams)
+  all_teams = JSON.parse(File.read('./nba_2018.json'))
 
   all_teams.each do |team|
-    # if truth_teams.search("[text()*='#{team['location']}']").first
-    #   wins = truth_teams.search("[text()*='#{team['location']}']").first.parent.parent.children[1].text.to_i
-    # elsif truth_teams.search("[text()*='#{team['name']}']").first
-    #   wins = truth_teams.search("[text()*='#{team['name']}']").first.parent.parent.children[1].text.to_i
-    # elsif truth_teams.search("[text()*='#{team['alt_location']}']").first
-    #   wins = truth_teams.search("[text()*='#{team['alt_location']}']").first.parent.parent.children[1].text.to_i
-    # else
-    #   binding.pry
-    # end
-    team['wins'][Date.today.prev_day.to_s] = team['wins']['2018-04-12']
+    truth_team = truth_teams.select{|t| t["teamId"] == team['teamId'] }.first
+    binding.pry if truth_team.empty?
+
+    team['wins'][Date.today.prev_day.to_s] = truth_team['win'].to_i
   end
 
   if write_file?
-    FileUtils.copy('./nba_2017.json', "./archive/nba_2017_#{Date.today}.json")
-    File.open('./nba_2017.json',"w") do |f|
+    FileUtils.copy('./nba_2018.json', "./archive/nba_#{Date.today}.json")
+    File.open('./nba_2018.json',"w") do |f|
       f.write(all_teams.to_json)
     end
   end
