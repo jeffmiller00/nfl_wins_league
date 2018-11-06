@@ -140,9 +140,9 @@ Undrafted:
           }
 
           function drawFrappeLines() {
-            var allWins = [[0, 16, 25], [0, 12, 19], [0, 15, 25], [0, 16, 21]]
+            var allWins = [[0, 16, 25, 35], [0, 12, 19, 38], [0, 15, 25, 35], [0, 16, 21, 32]]
             const data = {
-                labels: ['10.16','10.25','10.30'],//,'11.13','11.21','11.28','12.05','12.22','12.27','1.2','1.8','1.15','1.30', '2.12', '2.19', '2.26', '3.5', '3.19', '3.27', '4.2', '4.9', 'Reg Sea End', 'Round 1', 'Round 2', 'Conf Finals', 'Finals']],
+                labels: ['10.16','10.25','10.30','11.6'],//,'11.21','11.28','12.05','12.22','12.27','1.2','1.8','1.15','1.30', '2.12', '2.19', '2.26', '3.5', '3.19', '3.27', '4.2', '4.9', 'Reg Sea End', 'Round 1', 'Round 2', 'Conf Finals', 'Finals']],
                 datasets: [
                     {
                         title: "Jeff",
@@ -188,7 +188,7 @@ Undrafted:
             data.addColumn('number', '10.16');
             data.addColumn('number', '10.25');
             data.addColumn('number', '10.30');
-            // data.addColumn('number', '11.13');
+            data.addColumn('number', '11.6');
             // data.addColumn('number', '11.21');
             // data.addColumn('number', '11.28');
             // data.addColumn('number', '12.05');
@@ -212,36 +212,36 @@ Undrafted:
             // data.addColumn('number', 'Conf Finals');
             // data.addColumn('number', 'Finals');
             data.addRows([
-              ['Zach', 'Hawks', 0, 2, 2],
-              ['Jeff', 'Celtics', 0, 2, 4],
-              ['Zach', 'Nets', 0, 2, 2],
-              ['Zach', 'Hornets', 0, 2, 3],
-              ['Jeff', 'Bulls', 0, 1, 2],
-              ['Jeff', 'Cavaliers', 0, 0, 0],
-              ['Tim', 'Mavericks', 0, 2, 2],
-              ['Jeff', 'Nuggets', 0, 4, 5],
-              ['Jeff', 'Pistons', 0, 3, 4],
-              ['Tim', 'Warriors', 0, 4, 7],
-              ['Greg', 'Rockets', 0, 1, 1],
-              ['Greg', 'Pacers', 0, 3, 4],
-              ['Greg', 'Clippers', 0, 2, 4],
-              ['Tim', 'Lakers', 0, 1, 2],
-              ['Greg', 'Grizzlies', 0, 2, 3],
-              ['Jeff', 'Heat', 0, 2, 3],
-              ['Jeff', 'Bucks', 0, 4, 7],
-              ['Zach', 'Timberwolves', 0, 2, 3],
-              ['Tim', 'Pelicans', 0, 3, 4],
-              ['Tim', 'Knicks', 0, 1, 2],
-              ['Greg', 'Thunder', 0, 0, 1],
-              ['Greg', 'Magic', 0, 2, 2],
-              ['Tim', '76ers', 0, 2, 4],
-              ['', 'Suns', 0, 1, 1],
-              ['Greg', 'Trail Blazers', 0, 2, 4],
-              ['', 'Kings', 0, 2, 4],
-              ['Tim', 'Spurs', 0, 2, 4],
-              ['Zach', 'Raptors', 0, 5, 6],
-              ['Zach', 'Jazz', 0, 2, 4],
-              ['Zach', 'Wizards', 0, 1, 1]
+              ['Zach', 'Hawks', 0, 2, 2, 3],
+              ['Jeff', 'Celtics', 0, 2, 4, 6],
+              ['Zach', 'Nets', 0, 2, 2, 4],
+              ['Zach', 'Hornets', 0, 2, 3, 5],
+              ['Jeff', 'Bulls', 0, 1, 2, 3],
+              ['Jeff', 'Cavaliers', 0, 0, 0, 1],
+              ['Tim', 'Mavericks', 0, 2, 2, 2],
+              ['Jeff', 'Nuggets', 0, 4, 5, 9],
+              ['Jeff', 'Pistons', 0, 3, 4, 4],
+              ['Tim', 'Warriors', 0, 4, 7, 10],
+              ['Greg', 'Rockets', 0, 1, 1, 4],
+              ['Greg', 'Pacers', 0, 3, 4, 7],
+              ['Greg', 'Clippers', 0, 2, 4, 6],
+              ['Tim', 'Lakers', 0, 1, 2, 4],
+              ['Greg', 'Grizzlies', 0, 2, 3, 5],
+              ['Jeff', 'Heat', 0, 2, 3, 4],
+              ['Jeff', 'Bucks', 0, 4, 7, 8],
+              ['Zach', 'Timberwolves', 0, 2, 3, 4],
+              ['Tim', 'Pelicans', 0, 3, 4, 4],
+              ['Tim', 'Knicks', 0, 1, 2, 3],
+              ['Greg', 'Thunder', 0, 0, 1, 5],
+              ['Greg', 'Magic', 0, 2, 2, 4],
+              ['Tim', '76ers', 0, 2, 4, 6],
+              ['', 'Suns', 0, 1, 1, 2],
+              ['Greg', 'Trail Blazers', 0, 2, 4, 7],
+              ['', 'Kings', 0, 2, 4, 6],
+              ['Tim', 'Spurs', 0, 2, 4, 6],
+              ['Zach', 'Raptors', 0, 5, 6, 10],
+              ['Zach', 'Jazz', 0, 2, 4, 4],
+              ['Zach', 'Wizards', 0, 1, 1, 2]
               ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));
