@@ -140,10 +140,10 @@ Undrafted:
           }
 
           function drawFrappeLines() {
-            var allWins = [[0, 16, 25, 35, 42, 51], [0, 12, 19, 38, 52, 71], [0, 15, 25, 35, 50, 62], [0, 16, 21, 32, 44, 51]]
+            var allWins = [[0, 16, 25, 35, 42, 51, 64], [0, 12, 19, 38, 52, 71, 80], [0, 15, 25, 35, 50, 62, 76], [0, 16, 21, 32, 44, 51, 66]]
 
             const data = {
-                labels: ['10.16','10.25','10.30','11.6','11.13','11.20'],//,'12.05','12.22','12.27','1.2','1.8','1.15','1.30', '2.12', '2.19', '2.26', '3.5', '3.19', '3.27', '4.2', '4.9', 'Reg Sea End', 'Round 1', 'Round 2', 'Conf Finals', 'Finals']],
+                labels: ['10.16','10.25','10.30','11.6','11.13','11.20','11.27'],//,'12.05','12.22','12.27','1.2','1.8','1.15','1.30', '2.12', '2.19', '2.26', '3.5', '3.19', '3.27', '4.2', '4.9', 'Reg Sea End', 'Round 1', 'Round 2', 'Conf Finals', 'Finals']],
                 datasets: [
                     {
                         title: "Jeff",
@@ -192,6 +192,7 @@ Undrafted:
             data.addColumn('number', '11.6');
             data.addColumn('number', '11.13');
             data.addColumn('number', '11.20');
+            data.addColumn('number', '11.27');
             // data.addColumn('number', '12.05');
             // data.addColumn('number', '12.22');
             // data.addColumn('number', '12.27');
@@ -213,36 +214,36 @@ Undrafted:
             // data.addColumn('number', 'Conf Finals');
             // data.addColumn('number', 'Finals');
             data.addRows([
-              ['Zach', 'Hawks', 0, 2, 2, 3, 3, 3],
-              ['Jeff', 'Celtics', 0, 2, 4, 6, 7, 9],
-              ['Zach', 'Nets', 0, 2, 2, 4, 6, 7],
-              ['Zach', 'Hornets', 0, 2, 3, 5, 7, 8],
-              ['Jeff', 'Bulls', 0, 1, 2, 3, 4, 4],
-              ['Jeff', 'Cavaliers', 0, 0, 0, 1, 1, 2],
-              ['Tim', 'Mavericks', 0, 2, 2, 2, 5, 7],
-              ['Jeff', 'Nuggets', 0, 4, 5, 9, 9, 10],
-              ['Jeff', 'Pistons', 0, 3, 4, 4, 6, 8],
-              ['Tim', 'Warriors', 0, 4, 7, 10, 11, 12],
-              ['Greg', 'Rockets', 0, 1, 1, 4, 5, 8],
-              ['Greg', 'Pacers', 0, 3, 4, 7, 8, 11],
-              ['Greg', 'Clippers', 0, 2, 4, 6, 8, 11],
-              ['Tim', 'Lakers', 0, 1, 2, 4, 7, 9],
-              ['Greg', 'Grizzlies', 0, 2, 3, 5, 7, 11],
-              ['Jeff', 'Heat', 0, 2, 3, 4, 5, 6],
-              ['Jeff', 'Bucks', 0, 4, 7, 8, 10, 12],
-              ['Zach', 'Timberwolves', 0, 2, 3, 4, 5, 7],
-              ['Tim', 'Pelicans', 0, 3, 4, 4, 7, 10],
-              ['Tim', 'Knicks', 0, 1, 2, 3, 4, 4],
-              ['Greg', 'Thunder', 0, 0, 1, 5, 8, 10],
-              ['Greg', 'Magic', 0, 2, 2, 4, 6, 9],
-              ['Tim', '76ers', 0, 2, 4, 6, 9, 12],
-              ['', 'Suns', 0, 1, 1, 2, 2, 3],
-              ['Greg', 'Trail Blazers', 0, 2, 4, 7, 10, 11],
-              ['', 'Kings', 0, 2, 4, 6, 8, 9],
-              ['Tim', 'Spurs', 0, 2, 4, 6, 7, 8],
-              ['Zach', 'Raptors', 0, 5, 6, 10, 12, 13],
-              ['Zach', 'Jazz', 0, 2, 4, 4, 7, 8],
-              ['Zach', 'Wizards', 0, 1, 1, 2, 4, 5]
+              ['Zach', 'Hawks', 0, 2, 2, 3, 3, 3, 4],
+              ['Jeff', 'Celtics', 0, 2, 4, 6, 7, 9, 11],
+              ['Zach', 'Nets', 0, 2, 2, 4, 6, 7, 8],
+              ['Zach', 'Hornets', 0, 2, 3, 5, 7, 8, 10],
+              ['Jeff', 'Bulls', 0, 1, 2, 3, 4, 4, 5],
+              ['Jeff', 'Cavaliers', 0, 0, 0, 1, 1, 2, 4],
+              ['Tim', 'Mavericks', 0, 2, 2, 2, 5, 7, 9],
+              ['Jeff', 'Nuggets', 0, 4, 5, 9, 9, 10, 13],
+              ['Jeff', 'Pistons', 0, 3, 4, 4, 6, 8, 10],
+              ['Tim', 'Warriors', 0, 4, 7, 10, 11, 12, 15],
+              ['Greg', 'Rockets', 0, 1, 1, 4, 5, 8, 9],
+              ['Greg', 'Pacers', 0, 3, 4, 7, 8, 11, 12],
+              ['Greg', 'Clippers', 0, 2, 4, 6, 8, 11, 13],
+              ['Tim', 'Lakers', 0, 1, 2, 4, 7, 9, 11],
+              ['Greg', 'Grizzlies', 0, 2, 3, 5, 7, 11, 12],
+              ['Jeff', 'Heat', 0, 2, 3, 4, 5, 6, 7],
+              ['Jeff', 'Bucks', 0, 4, 7, 8, 10, 12, 14],
+              ['Zach', 'Timberwolves', 0, 2, 3, 4, 5, 7, 10],
+              ['Tim', 'Pelicans', 0, 3, 4, 4, 7, 10, 10],
+              ['Tim', 'Knicks', 0, 1, 2, 3, 4, 4, 7],
+              ['Greg', 'Thunder', 0, 0, 1, 5, 8, 10, 12],
+              ['Greg', 'Magic', 0, 2, 2, 4, 6, 9, 10],
+              ['Tim', '76ers', 0, 2, 4, 6, 9, 12, 14],
+              ['', 'Suns', 0, 1, 1, 2, 2, 3, 4],
+              ['Greg', 'Trail Blazers', 0, 2, 4, 7, 10, 11, 12],
+              ['', 'Kings', 0, 2, 4, 6, 8, 9, 10],
+              ['Tim', 'Spurs', 0, 2, 4, 6, 7, 8, 10],
+              ['Zach', 'Raptors', 0, 5, 6, 10, 12, 13, 17],
+              ['Zach', 'Jazz', 0, 2, 4, 4, 7, 8, 9],
+              ['Zach', 'Wizards', 0, 1, 1, 2, 4, 5, 8]
               ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));
