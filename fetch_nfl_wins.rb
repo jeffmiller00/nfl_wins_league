@@ -19,7 +19,7 @@ def generate_team_table
 end
 
 EMPTY_WEEK = {jeff: 0, greg: 0, tim: 0, zach: 0, mike: 0}
-CURRENT_NFL_WEEK = 14
+CURRENT_NFL_WEEK = 15
 
 def generate_summary_chart
   all_teams = get_teams
