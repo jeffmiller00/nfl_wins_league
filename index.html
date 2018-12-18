@@ -124,8 +124,7 @@
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       </footer>
     </div> <!-- /container -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
@@ -179,8 +178,7 @@
                 ]
             }
 
-            const chart = new frappe.Chart("#chart_div", {  // or a DOM element,
-                                                        // new Chart() in case of ES6 module with above usage
+            const chart = new frappe.Chart("#chart_div", {
                 data: data,
                 type: 'line', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
                 colors: ['#004C54', '#C60C30', '#4F2683', '#FFB612', '#0076B6'],
@@ -190,7 +188,7 @@
 
     // ------------------------------------------------------------------------------ //
 
-          google.charts.load('current', {packages: ['corechart', 'line', 'table']});
+          google.charts.load('current', {packages: ['corechart', 'table']});
           google.charts.setOnLoadCallback(drawAllCharts);
 
           function drawTable() {

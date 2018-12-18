@@ -112,8 +112,7 @@ Undrafted:
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       </footer>
     </div> <!-- /container -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
         <script src="../js/vendor/bootstrap.min.js"></script>
 
@@ -131,7 +130,7 @@ Undrafted:
         </script>
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script src="https://unpkg.com/frappe-charts@0.0.7/dist/frappe-charts.min.iife.js"></script>
+        <script src="https://unpkg.com/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
         <script>
           function drawAllCharts() {
             // drawLineStyles();
@@ -146,33 +145,28 @@ Undrafted:
                 labels: ['10.16','10.25','10.30','11.6','11.13','11.20','11.27','12.04','12.11','12.18'],//,'1.2','1.8','1.15','1.30', '2.12', '2.19', '2.26', '3.5', '3.19', '3.27', '4.2', '4.9', 'Reg Sea End', 'Round 1', 'Round 2', 'Conf Finals', 'Finals']],
                 datasets: [
                     {
-                        title: "Jeff",
-                        color: '#BA0C2F',
+                        name: "Jeff",
                         values: allWins[0]
                     },
                     {
-                        title: "Greg",
-                        color: "#003DA5",
+                        name: "Greg",
                         values: allWins[1]
                     },
                     {
-                        title: "Tim",
-                        color: "#F05133",
+                        name: "Tim",
                         values: allWins[2]
                     },
                     {
-                        title: "Zach",
-                        color: "#FFB81C",
+                        name: "Zach",
                         values: allWins[3]
                     }
                 ]
             }
 
-            const chart = new Chart({
-                parent: '#chart_div',
+            const chart = new frappe.Chart('#chart_div', {
                 data: data,
                 type: 'line', // or 'line', 'scatter', 'percentage'
-                colors: ['#BA0C2F', '#003DA5', '#FFB81C', '#007DC3'],
+                colors: ['#BA0C2F', '#003DA5', '#F05133', '#FFB81C'],
                 height: 400
             })
           }
