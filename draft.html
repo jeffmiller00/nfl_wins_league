@@ -62,17 +62,8 @@
 
       <div class="row">
         <div class="col-xs-3">
-          <h1>Greg</h1>
-          <h3><em>Pick: 1</em></h3>
-          <ol id="greg-list">
-            <li v-for="item in items">
-              <img :src=item.image><h4>{{ item.full_name }}</h4>
-            </li>
-          </ol>
-        </div>
-        <div class="col-xs-2">
           <h1>Jeff</h1>
-          <h3><em>Pick: 2</em></h3>
+          <h3><em>Pick: 1</em></h3>
           <ol id="jeff-list">
             <li v-for="item in items">
               <img :src=item.image><h4>{{ item.full_name }}</h4>
@@ -80,9 +71,18 @@
           </ol>
         </div>
         <div class="col-xs-2">
-          <h1>Tim</h1>
+          <h1>Zach</h1>
+          <h3><em>Pick: 2</em></h3>
+          <ol id="zach-list">
+            <li v-for="item in items">
+              <img :src=item.image><h4>{{ item.full_name }}</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="col-xs-2">
+          <h1>Greg</h1>
           <h3><em>Pick: 3</em></h3>
-          <ol id="tim-list">
+          <ol id="greg-list">
             <li v-for="item in items">
               <img :src=item.image><h4>{{ item.full_name }}</h4>
             </li>
@@ -98,9 +98,9 @@
           </ol>
         </div>
         <div class="col-xs-3">
-          <h1>Zach</h1>
+          <h1>Tim</h1>
           <h3><em>Pick: 5</em></h3>
-          <ol id="zach-list">
+          <ol id="tim-list">
             <li v-for="item in items">
               <img :src=item.image><h4>{{ item.full_name }}</h4>
             </li>
@@ -138,7 +138,7 @@
       zach = []
       mike = []
 
-      $.getJSON("http://www.kristaandjeff.com/brothers/nfl_2018.json", function(json) {
+      $.getJSON("http://www.millerteamleague.com/nfl_2019.json", function(json) {
         $.each(json, function(i, val) {
           val["full_name"] = val.location + " " + val.name
           // console.log( i + ": " + val["full_name"] );
@@ -165,7 +165,7 @@
         refreshLists();
       });
 
-      setTimeout("getUpdatedList()", 200);
+      setTimeout("getUpdatedList()", 100);
     }
 
     $( document ).ready( getUpdatedList() );
